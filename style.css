@@ -40,7 +40,8 @@ button {
   margin: 0 auto;
 }
 
-/* Header */
+/* ================= HEADER ================= */
+
 .header {
   background: #111;
   color: white;
@@ -89,6 +90,7 @@ button {
 .nav-links a {
   color: #ddd;
   font-size: 14px;
+  transition: color .2s ease;
 }
 
 .nav-links a:hover {
@@ -107,6 +109,13 @@ button {
   border-radius: 5px;
   color: white;
   font-size: 13px;
+  transition: .2s ease;
+}
+
+.nav-button:hover {
+  background: var(--accent);
+  color: #111;
+  border-color: var(--accent);
 }
 
 .menu-button {
@@ -115,9 +124,11 @@ button {
   border: 0;
   color: white;
   font-size: 25px;
+  cursor: pointer;
 }
 
-/* Hero - تنها بخش تغییرکرده */
+/* ================= HERO ================= */
+
 .hero {
   background:
     linear-gradient(
@@ -175,6 +186,7 @@ button {
   font-size: 14px;
   font-weight: bold;
   border: 1px solid transparent;
+  transition: .2s ease;
 }
 
 .button-primary {
@@ -182,9 +194,19 @@ button {
   color: #111;
 }
 
+.button-primary:hover {
+  background: #ff9e3d;
+  transform: translateY(-2px);
+}
+
 .button-secondary {
   border-color: #666;
   color: white;
+}
+
+.button-secondary:hover {
+  background: white;
+  color: #111;
 }
 
 .hero-stats {
@@ -206,7 +228,8 @@ button {
   font-size: 13px;
 }
 
-/* Sections */
+/* ================= SECTIONS ================= */
+
 .section {
   padding: 85px 0;
 }
@@ -230,7 +253,8 @@ button {
   max-width: 460px;
 }
 
-/* Products */
+/* ================= PRODUCTS ================= */
+
 .products-section {
   background: #f4f4f2;
 }
@@ -249,6 +273,7 @@ button {
   padding: 9px 17px;
   border-radius: 4px;
   font-size: 13px;
+  transition: .2s ease;
 }
 
 .filter-button.active,
@@ -267,21 +292,62 @@ button {
 .product-card {
   background: white;
   border: 1px solid var(--border);
-  min-height: 320px;
+  min-height: 340px;
   display: flex;
   flex-direction: column;
-  transition: .25s;
+  overflow: hidden;
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    border-color .25s ease;
 }
 
 .product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0,0,0,.08);
+  transform: translateY(-7px);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, .12);
+  border-color: var(--accent);
 }
 
 .product-visual {
-  height: 145px;
-  background: linear-gradient(135deg, #292929, #555);
+  height: 165px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0, 0, 0, .15),
+      rgba(0, 0, 0, .55)
+    ),
+    repeating-linear-gradient(
+      135deg,
+      #343434 0px,
+      #343434 10px,
+      #3d3d3d 10px,
+      #3d3d3d 12px
+    );
   position: relative;
+  overflow: hidden;
+}
+
+.product-visual::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 55px;
+  left: -25px;
+  top: 55px;
+  border: 8px solid rgba(242, 140, 40, .75);
+  transform: rotate(-25deg);
+  opacity: .8;
+}
+
+.product-visual::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  left: -45px;
+  bottom: -95px;
+  border: 2px solid rgba(242, 140, 40, .35);
+  transform: rotate(45deg);
 }
 
 .product-number {
@@ -291,10 +357,14 @@ button {
   color: var(--accent);
   font-size: 12px;
   font-weight: bold;
+  z-index: 2;
 }
 
 .product-content {
-  padding: 22px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .product-type {
@@ -306,6 +376,7 @@ button {
 .product-title {
   font-size: 22px;
   margin: 7px 0;
+  line-height: 1.5;
 }
 
 .product-description {
@@ -314,13 +385,33 @@ button {
 }
 
 .product-link {
-  display: inline-block;
-  margin-top: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 18px;
   font-size: 13px;
   font-weight: bold;
+  color: #222;
 }
 
-/* Why */
+.product-link::before {
+  content: "←";
+  color: var(--accent);
+  font-size: 18px;
+  transition: transform .2s ease;
+}
+
+.product-link:hover {
+  color: var(--accent);
+}
+
+.product-link:hover::before {
+  transform: translateX(-4px);
+}
+
+/* ================= WHY US ================= */
+
 .why-section {
   background: #151515;
   color: white;
@@ -340,6 +431,12 @@ button {
   border: 1px solid #333;
   padding: 28px;
   background: #1d1d1d;
+  transition: .25s ease;
+}
+
+.why-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
 }
 
 .why-icon {
@@ -358,7 +455,8 @@ button {
   font-size: 14px;
 }
 
-/* CTA */
+/* ================= CTA ================= */
+
 .cta-section {
   padding: 30px 0 85px;
   background: #151515;
@@ -389,9 +487,15 @@ button {
   padding: 13px 23px;
   border-radius: 5px;
   white-space: nowrap;
+  transition: .2s ease;
 }
 
-/* Contact */
+.cta-button:hover {
+  background: #333;
+}
+
+/* ================= CONTACT ================= */
+
 .contact-section {
   background: white;
 }
@@ -431,7 +535,8 @@ button {
   background: #f1f1f1;
 }
 
-/* Footer */
+/* ================= FOOTER ================= */
+
 .footer {
   background: #111;
   color: white;
@@ -454,7 +559,8 @@ button {
   font-size: 12px;
 }
 
-/* Floating buttons */
+/* ================= FLOATING BUTTONS ================= */
+
 .floating-actions {
   position: fixed;
   left: 20px;
@@ -473,7 +579,7 @@ button {
   place-items: center;
   color: white;
   font-size: 19px;
-  box-shadow: 0 5px 20px rgba(0,0,0,.2);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
 }
 
 .floating-call {
@@ -484,7 +590,8 @@ button {
   background: #20a85a;
 }
 
-/* Mobile menu */
+/* ================= MOBILE MENU ================= */
+
 .mobile-menu {
   position: fixed;
   inset: 0;
@@ -515,7 +622,8 @@ button {
   font-size: 24px;
 }
 
-/* Responsive */
+/* ================= RESPONSIVE ================= */
+
 @media (max-width: 950px) {
   .nav-links,
   .nav-actions {
@@ -544,6 +652,14 @@ button {
     padding: 70px 0;
     min-height: 520px;
     background-position: center center;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero-description {
+    font-size: 15px;
   }
 
   .hero-stats {
@@ -585,4 +701,9 @@ button {
   .footer-copy {
     margin-top: 10px;
   }
-}
+
+  .floating-actions {
+    left: 12px;
+    bottom: 12px;
+  }
+  }
