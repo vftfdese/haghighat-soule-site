@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,912 +12,12 @@
     content="حقیقت سوله؛ تأمین و فروش انواع آهن‌آلات شامل تیرآهن، میلگرد، ورق فولادی و پروفیل."
   >
 
-  <style>
-    :root {
-      --bg: #f4f4f2;
-      --surface: #ffffff;
-      --surface-2: #eeeeeb;
-      --text: #171717;
-      --muted: #6d6d68;
-      --dark: #111111;
-      --dark-2: #1b1b1b;
-      --accent: #f28c18;
-      --accent-dark: #d87305;
-      --border: #deded9;
-      --success: #16804b;
-      --shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-      --radius: 18px;
-      --max-width: 1180px;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family:
-        Tahoma,
-        Arial,
-        sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.8;
-      overflow-x: hidden;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button {
-      font-family: inherit;
-    }
-
-    .container {
-      width: min(92%, var(--max-width));
-      margin-inline: auto;
-    }
-
-    /* =========================
-       HEADER
-    ========================= */
-
-    .header {
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      z-index: 100;
-      color: #fff;
-    }
-
-    .nav {
-      min-height: 82px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 900;
-      letter-spacing: -0.5px;
-    }
-
-    .logo-mark {
-      width: 42px;
-      height: 42px;
-      display: grid;
-      place-items: center;
-      background: var(--accent);
-      color: #111;
-      font-size: 18px;
-      font-weight: 900;
-      border-radius: 10px;
-    }
-
-    .logo-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.2;
-    }
-
-    .logo-text strong {
-      font-size: 17px;
-    }
-
-    .logo-text span {
-      color: rgba(255, 255, 255, 0.65);
-      font-size: 10px;
-      margin-top: 3px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-    }
-
-    .nav-links a {
-      position: relative;
-      color: rgba(255, 255, 255, 0.82);
-      font-size: 14px;
-      transition: 0.25s ease;
-    }
-
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: -8px;
-      width: 0;
-      height: 2px;
-      background: var(--accent);
-      transition: 0.25s ease;
-    }
-
-    .nav-links a:hover {
-      color: #fff;
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .nav-button {
-      padding: 10px 17px;
-      border-radius: 9px;
-      background: var(--accent);
-      color: #111;
-      font-size: 13px;
-      font-weight: 800;
-      transition: 0.25s ease;
-    }
-
-    .nav-button:hover {
-      background: #fff;
-      transform: translateY(-2px);
-    }
-
-    .menu-button {
-      display: none;
-      width: 42px;
-      height: 42px;
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 10px;
-      background: rgba(255,255,255,0.08);
-      color: #fff;
-      cursor: pointer;
-      font-size: 20px;
-    }
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      position: relative;
-      min-height: 720px;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-      color: #fff;
-      background:
-        radial-gradient(
-          circle at 15% 30%,
-          rgba(242, 140, 24, 0.18),
-          transparent 30%
-        ),
-        linear-gradient(
-          135deg,
-          #090909 0%,
-          #161616 48%,
-          #242424 100%
-        );
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      opacity: 0.18;
-      background-image:
-        linear-gradient(120deg, transparent 48%, rgba(255,255,255,0.12) 49%, transparent 50%),
-        linear-gradient(60deg, transparent 48%, rgba(255,255,255,0.07) 49%, transparent 50%);
-      background-size: 150px 150px;
-      pointer-events: none;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      width: 550px;
-      height: 550px;
-      left: -180px;
-      bottom: -280px;
-      border: 1px solid rgba(242, 140, 24, 0.25);
-      border-radius: 50%;
-      box-shadow:
-        0 0 0 70px rgba(242, 140, 24, 0.035),
-        0 0 0 140px rgba(242, 140, 24, 0.02);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      width: min(92%, var(--max-width));
-      margin-inline: auto;
-      padding-top: 70px;
-    }
-
-    .hero-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      padding: 7px 12px;
-      border: 1px solid rgba(242, 140, 24, 0.35);
-      border-radius: 100px;
-      color: #ffb45c;
-      background: rgba(242, 140, 24, 0.07);
-      font-size: 12px;
-      margin-bottom: 24px;
-    }
-
-    .hero-label span {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 14px var(--accent);
-    }
-
-    .hero h1 {
-      max-width: 780px;
-      font-size: clamp(44px, 7vw, 86px);
-      line-height: 1.05;
-      letter-spacing: -3px;
-      font-weight: 950;
-    }
-
-    .hero h1 strong {
-      color: var(--accent);
-    }
-
-    .hero-description {
-      max-width: 620px;
-      margin-top: 25px;
-      color: rgba(255,255,255,0.68);
-      font-size: 17px;
-      line-height: 2;
-    }
-
-    .hero-actions {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 34px;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 50px;
-      padding: 0 22px;
-      border-radius: 10px;
-      font-size: 14px;
-      font-weight: 800;
-      transition: 0.25s ease;
-    }
-
-    .button-primary {
-      background: var(--accent);
-      color: #111;
-    }
-
-    .button-primary:hover {
-      background: #ffad48;
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(242, 140, 24, 0.18);
-    }
-
-    .button-secondary {
-      border: 1px solid rgba(255,255,255,0.18);
-      color: #fff;
-      background: rgba(255,255,255,0.05);
-    }
-
-    .button-secondary:hover {
-      background: rgba(255,255,255,0.1);
-      transform: translateY(-3px);
-    }
-
-    .hero-stats {
-      display: flex;
-      gap: 45px;
-      margin-top: 58px;
-    }
-
-    .hero-stat {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .hero-stat strong {
-      font-size: 25px;
-      color: #fff;
-    }
-
-    .hero-stat span {
-      color: rgba(255,255,255,0.48);
-      font-size: 11px;
-    }
-
-    /* =========================
-       SECTIONS
-    ========================= */
-
-    .section {
-      padding: 100px 0;
-    }
-
-    .section-header {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 30px;
-      margin-bottom: 42px;
-    }
-
-    .section-kicker {
-      color: var(--accent-dark);
-      font-size: 12px;
-      font-weight: 900;
-      margin-bottom: 8px;
-    }
-
-    .section-title {
-      font-size: clamp(30px, 4vw, 48px);
-      line-height: 1.2;
-      letter-spacing: -1.5px;
-      font-weight: 950;
-    }
-
-    .section-description {
-      max-width: 470px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    /* =========================
-       PRODUCTS
-    ========================= */
-
-    .products-section {
-      background: var(--bg);
-    }
-
-    .filter-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-      margin-bottom: 28px;
-    }
-
-    .filter-button {
-      border: 1px solid var(--border);
-      background: var(--surface);
-      color: var(--muted);
-      border-radius: 9px;
-      padding: 9px 15px;
-      cursor: pointer;
-      font-size: 12px;
-      transition: 0.25s ease;
-    }
-
-    .filter-button:hover,
-    .filter-button.active {
-      border-color: var(--accent);
-      background: var(--accent);
-      color: #111;
-      font-weight: 800;
-    }
-
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-    }
-
-    .product-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      transition: 0.3s ease;
-    }
-
-    .product-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow);
-      border-color: rgba(242, 140, 24, 0.35);
-    }
-
-    .product-visual {
-      position: relative;
-      height: 190px;
-      overflow: hidden;
-      background:
-        linear-gradient(135deg, #262626, #101010);
-    }
-
-    .product-visual::before {
-      content: "";
-      position: absolute;
-      width: 190px;
-      height: 30px;
-      background: #4d4d4d;
-      top: 75px;
-      left: 50%;
-      transform: translateX(-50%) rotate(-18deg);
-      box-shadow:
-        0 35px 0 #343434,
-        0 70px 0 #222;
-    }
-
-    .product-number {
-      position: absolute;
-      top: 14px;
-      right: 14px;
-      z-index: 2;
-      padding: 5px 9px;
-      border-radius: 6px;
-      background: var(--accent);
-      color: #111;
-      font-size: 10px;
-      font-weight: 900;
-    }
-
-    .product-content {
-      padding: 20px;
-    }
-
-    .product-type {
-      color: var(--accent-dark);
-      font-size: 10px;
-      font-weight: 900;
-      margin-bottom: 5px;
-    }
-
-    .product-title {
-      font-size: 19px;
-      font-weight: 900;
-      margin-bottom: 8px;
-    }
-
-    .product-description {
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.8;
-      margin-bottom: 18px;
-    }
-
-    .product-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      color: var(--text);
-      font-size: 12px;
-      font-weight: 900;
-    }
-
-    .product-link:hover {
-      color: var(--accent-dark);
-    }
-
-    /* =========================
-       WHY US
-    ========================= */
-
-    .why-section {
-      background: var(--dark);
-      color: #fff;
-    }
-
-    .why-section .section-description {
-      color: rgba(255,255,255,0.55);
-    }
-
-    .why-section .section-kicker {
-      color: var(--accent);
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .why-card {
-      min-height: 250px;
-      padding: 28px;
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: var(--radius);
-      background: rgba(255,255,255,0.035);
-      transition: 0.3s ease;
-    }
-
-    .why-card:hover {
-      border-color: rgba(242, 140, 24, 0.35);
-      transform: translateY(-5px);
-    }
-
-    .why-icon {
-      width: 48px;
-      height: 48px;
-      display: grid;
-      place-items: center;
-      margin-bottom: 30px;
-      border-radius: 12px;
-      background: rgba(242, 140, 24, 0.12);
-      color: var(--accent);
-      font-size: 20px;
-    }
-
-    .why-card h3 {
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    .why-card p {
-      color: rgba(255,255,255,0.52);
-      font-size: 13px;
-      line-height: 2;
-    }
-
-    /* =========================
-       CTA
-    ========================= */
-
-    .cta-section {
-      padding: 70px 0;
-      background: var(--bg);
-    }
-
-    .cta-box {
-      position: relative;
-      overflow: hidden;
-      padding: 55px;
-      border-radius: 25px;
-      background: var(--accent);
-      color: #111;
-    }
-
-    .cta-box::after {
-      content: "H";
-      position: absolute;
-      left: 30px;
-      bottom: -90px;
-      font-size: 280px;
-      line-height: 1;
-      font-weight: 950;
-      opacity: 0.06;
-    }
-
-    .cta-content {
-      position: relative;
-      z-index: 2;
-      max-width: 650px;
-    }
-
-    .cta-content h2 {
-      font-size: clamp(28px, 4vw, 44px);
-      line-height: 1.25;
-      font-weight: 950;
-      margin-bottom: 13px;
-    }
-
-    .cta-content p {
-      max-width: 560px;
-      font-size: 14px;
-      color: rgba(17,17,17,0.65);
-      margin-bottom: 24px;
-    }
-
-    .cta-button {
-      display: inline-flex;
-      min-height: 48px;
-      align-items: center;
-      padding: 0 20px;
-      border-radius: 9px;
-      background: #111;
-      color: #fff;
-      font-size: 13px;
-      font-weight: 800;
-      transition: 0.25s ease;
-    }
-
-    .cta-button:hover {
-      transform: translateY(-3px);
-      background: #222;
-    }
-
-    /* =========================
-       CONTACT
-    ========================= */
-
-    .contact-section {
-      background: var(--surface);
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 20px;
-    }
-
-    .contact-card {
-      padding: 32px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: var(--surface);
-    }
-
-    .contact-card.dark {
-      background: var(--dark);
-      color: #fff;
-      border-color: var(--dark);
-    }
-
-    .contact-card h3 {
-      font-size: 23px;
-      margin-bottom: 12px;
-    }
-
-    .contact-card p {
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 2;
-    }
-
-    .contact-card.dark p {
-      color: rgba(255,255,255,0.55);
-    }
-
-    .contact-list {
-      display: grid;
-      gap: 12px;
-      margin-top: 25px;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 12px;
-      border-radius: 10px;
-      background: var(--surface-2);
-      font-size: 13px;
-    }
-
-    .contact-card.dark .contact-item {
-      background: rgba(255,255,255,0.05);
-    }
-
-    .contact-icon {
-      width: 35px;
-      height: 35px;
-      display: grid;
-      place-items: center;
-      border-radius: 8px;
-      background: var(--accent);
-      color: #111;
-      font-weight: 900;
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    .footer {
-      padding: 30px 0;
-      background: #0b0b0b;
-      color: #fff;
-    }
-
-    .footer-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .footer-copy {
-      color: rgba(255,255,255,0.45);
-      font-size: 11px;
-    }
-
-    .footer-brand {
-      font-size: 14px;
-      font-weight: 900;
-    }
-
-    /* =========================
-       FLOATING BUTTONS
-    ========================= */
-
-    .floating-actions {
-      position: fixed;
-      left: 18px;
-      bottom: 18px;
-      z-index: 200;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .floating-button {
-      width: 48px;
-      height: 48px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      color: #fff;
-      font-size: 16px;
-      font-weight: 900;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.18);
-      transition: 0.25s ease;
-    }
-
-    .floating-button:hover {
-      transform: scale(1.08);
-    }
-
-    .floating-call {
-      background: #222;
-    }
-
-    .floating-whatsapp {
-      background: var(--success);
-    }
-
-    /* =========================
-       MOBILE MENU
-    ========================= */
-
-    .mobile-menu {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 150;
-      background: rgba(5,5,5,0.97);
-      color: #fff;
-      padding: 100px 25px 30px;
-    }
-
-    .mobile-menu.open {
-      display: block;
-    }
-
-    .mobile-menu-links {
-      display: grid;
-      gap: 20px;
-    }
-
-    .mobile-menu-links a {
-      padding: 15px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      font-size: 18px;
-    }
-
-    .mobile-close {
-      position: absolute;
-      top: 25px;
-      left: 25px;
-      width: 42px;
-      height: 42px;
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 10px;
-      background: transparent;
-      color: #fff;
-      font-size: 22px;
-      cursor: pointer;
-    }
-
-    /* =========================
-       RESPONSIVE
-    ========================= */
-
-    @media (max-width: 950px) {
-      .nav-links {
-        display: none;
-      }
-
-      .nav-actions .nav-button {
-        display: none;
-      }
-
-      .menu-button {
-        display: block;
-      }
-
-      .products-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .why-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 650px) {
-      .hero {
-        min-height: 690px;
-      }
-
-      .hero-content {
-        padding-top: 80px;
-      }
-
-      .hero h1 {
-        font-size: 48px;
-        letter-spacing: -2px;
-      }
-
-      .hero-description {
-        font-size: 14px;
-      }
-
-      .hero-stats {
-        gap: 22px;
-        flex-wrap: wrap;
-        margin-top: 42px;
-      }
-
-      .section {
-        padding: 70px 0;
-      }
-
-      .section-header {
-        display: block;
-      }
-
-      .section-description {
-        margin-top: 14px;
-      }
-
-      .products-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cta-box {
-        padding: 32px 25px;
-      }
-
-      .footer-inner {
-        display: block;
-        text-align: center;
-      }
-
-      .footer-brand {
-        margin-bottom: 8px;
-      }
-
-      .floating-actions {
-        left: 12px;
-        bottom: 12px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- =========================
-       HEADER
-  ========================== -->
-
+  <!-- HEADER -->
   <header class="header">
     <div class="container nav">
 
@@ -953,10 +54,7 @@
   </header>
 
 
-  <!-- =========================
-       MOBILE MENU
-  ========================== -->
-
+  <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
 
     <button
@@ -977,10 +75,7 @@
   </div>
 
 
-  <!-- =========================
-       HERO
-  ========================== -->
-
+  <!-- HERO -->
   <main>
 
     <section class="hero">
@@ -1026,15 +121,533 @@
 
           <div class="hero-stat">
             <strong>۰۱</strong>
-            <span>تأمین مستقیم</span>
+            <span>تأمین محصولات</span>
           </div>
 
           <div class="hero-stat">
             <strong>۰۲</strong>
-            <span>تنوع محصولات</span>
+            <span>تنوع مقاطع</span>
           </div>
 
           <div class="hero-stat">
             <strong>۰۳</strong>
             <span>پاسخ‌گویی سریع</span>
-        
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+    <section
+      class="section products-section"
+      id="products"
+    >
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div>
+            <div class="section-kicker">
+              محصولات
+            </div>
+
+            <h2 class="section-title">
+              مقاطع مورد نیاز شما
+            </h2>
+          </div>
+
+          <p class="section-description">
+            محصولات اصلی قابل تأمین توسط حقیقت سوله.
+            برای دریافت قیمت و موجودی روز، استعلام بگیرید.
+          </p>
+
+        </div>
+
+
+        <div class="filter-buttons">
+
+          <button
+            class="filter-button active"
+            data-filter="all"
+          >
+            همه
+          </button>
+
+          <button
+            class="filter-button"
+            data-filter="beam"
+          >
+            تیرآهن
+          </button>
+
+          <button
+            class="filter-button"
+            data-filter="rebar"
+          >
+            میلگرد
+          </button>
+
+          <button
+            class="filter-button"
+            data-filter="sheet"
+          >
+            ورق فولادی
+          </button>
+
+          <button
+            class="filter-button"
+            data-filter="profile"
+          >
+            پروفیل
+          </button>
+
+        </div>
+
+
+        <div class="products-grid">
+
+          <article
+            class="product-card"
+            data-category="beam"
+          >
+
+            <div class="product-visual">
+              <div class="product-number">01</div>
+            </div>
+
+            <div class="product-content">
+
+              <div class="product-type">
+                مقطع فولادی
+              </div>
+
+              <h3 class="product-title">
+                تیرآهن
+              </h3>
+
+              <p class="product-description">
+                انواع تیرآهن در سایزهای مختلف برای
+                کاربردهای ساختمانی و صنعتی.
+              </p>
+
+              <a
+                href="#quote"
+                class="product-link"
+              >
+                استعلام قیمت ←
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <article
+            class="product-card"
+            data-category="rebar"
+          >
+
+            <div class="product-visual">
+              <div class="product-number">02</div>
+            </div>
+
+            <div class="product-content">
+
+              <div class="product-type">
+                مقطع فولادی
+              </div>
+
+              <h3 class="product-title">
+                میلگرد
+              </h3>
+
+              <p class="product-description">
+                تأمین میلگرد مورد نیاز پروژه‌های ساختمانی
+                و صنعتی در سایزهای مختلف.
+              </p>
+
+              <a
+                href="#quote"
+                class="product-link"
+              >
+                استعلام قیمت ←
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <article
+            class="product-card"
+            data-category="sheet"
+          >
+
+            <div class="product-visual">
+              <div class="product-number">03</div>
+            </div>
+
+            <div class="product-content">
+
+              <div class="product-type">
+                ورق فلزی
+              </div>
+
+              <h3 class="product-title">
+                ورق فولادی
+              </h3>
+
+              <p class="product-description">
+                انواع ورق فولادی برای مصارف صنعتی،
+                ساختمانی و ساخت تجهیزات.
+              </p>
+
+              <a
+                href="#quote"
+                class="product-link"
+              >
+                استعلام قیمت ←
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <article
+            class="product-card"
+            data-category="profile"
+          >
+
+            <div class="product-visual">
+              <div class="product-number">04</div>
+            </div>
+
+            <div class="product-content">
+
+              <div class="product-type">
+                مقطع فولادی
+              </div>
+
+              <h3 class="product-title">
+                پروفیل
+              </h3>
+
+              <p class="product-description">
+                پروفیل‌های فولادی مناسب برای کاربردهای
+                ساختمانی و صنعتی.
+              </p>
+
+              <a
+                href="#quote"
+                class="product-link"
+              >
+                استعلام قیمت ←
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- WHY US -->
+    <section
+      class="section why-section"
+      id="why-us"
+    >
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div>
+
+            <div class="section-kicker">
+              حقیقت سوله
+            </div>
+
+            <h2 class="section-title">
+              خرید آهن،
+              <br>
+              ساده‌تر و مطمئن‌تر
+            </h2>
+
+          </div>
+
+          <p class="section-description">
+            هدف ما فقط فروش محصول نیست؛
+            بلکه کمک به انتخاب درست و پاسخ‌گویی سریع
+            به نیاز مشتری است.
+          </p>
+
+        </div>
+
+
+        <div class="why-grid">
+
+          <article class="why-card">
+
+            <div class="why-icon">
+              ✓
+            </div>
+
+            <h3>
+              تأمین محصولات
+            </h3>
+
+            <p>
+              تلاش برای تأمین محصولات مورد نیاز پروژه‌ها
+              و ارائه گزینه‌های مناسب بر اساس نیاز مشتری.
+            </p>
+
+          </article>
+
+
+          <article class="why-card">
+
+            <div class="why-icon">
+              ↗
+            </div>
+
+            <h3>
+              استعلام سریع
+            </h3>
+
+            <p>
+              برای دریافت قیمت و موجودی، درخواست خود را
+              ارسال کنید تا اطلاعات مورد نیازتان بررسی شود.
+            </p>
+
+          </article>
+
+
+          <article class="why-card">
+
+            <div class="why-icon">
+              +
+            </div>
+
+            <h3>
+              مشاوره قبل از خرید
+            </h3>
+
+            <p>
+              اگر درباره نوع یا سایز محصول مطمئن نیستید،
+              پیش از خرید درباره نیاز پروژه خود صحبت کنید.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section
+      class="cta-section"
+      id="quote"
+    >
+
+      <div class="container">
+
+        <div class="cta-box">
+
+          <div class="cta-content">
+
+            <h2>
+              قیمت امروز آهن را می‌خواهید؟
+            </h2>
+
+            <p>
+              مشخصات محصول مورد نیازتان را ارسال کنید
+              تا برای استعلام قیمت و موجودی راهنمایی شوید.
+            </p>
+
+            <a
+              href="#contact"
+              class="cta-button"
+            >
+              درخواست استعلام
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section
+      class="section contact-section"
+      id="contact"
+    >
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div>
+
+            <div class="section-kicker">
+              ارتباط با ما
+            </div>
+
+            <h2 class="section-title">
+              برای خرید آهن
+              <br>
+              با ما در ارتباط باشید.
+            </h2>
+
+          </div>
+
+          <p class="section-description">
+            اطلاعات تماس نهایی را بعد از تأیید کارفرما
+            در همین بخش قرار می‌دهیم.
+          </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+          <div class="contact-card">
+
+            <h3>
+              اطلاعات تماس
+            </h3>
+
+            <p>
+              این بخش در نسخه نهایی با شماره تماس،
+              واتساپ و آدرس دقیق شرکت تکمیل خواهد شد.
+            </p>
+
+            <div class="contact-list">
+
+              <div class="contact-item">
+
+                <div class="contact-icon">
+                  ☎
+                </div>
+
+                <span>
+                  شماره تماس — به‌زودی
+                </span>
+
+              </div>
+
+
+              <div class="contact-item">
+
+                <div class="contact-icon">
+                  W
+                </div>
+
+                <span>
+                  واتساپ — به‌زودی
+                </span>
+
+              </div>
+
+
+              <div class="contact-item">
+
+                <div class="contact-icon">
+                  ⌖
+                </div>
+
+                <span>
+                  شهرک صنعتی شمس‌آباد
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="contact-card dark">
+
+            <h3>
+              حقیقت سوله
+            </h3>
+
+            <p>
+              تأمین و فروش آهن‌آلات برای پروژه‌های
+              ساختمانی و صنعتی.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        حقیقت سوله
+      </div>
+
+      <div class="footer-copy">
+        © ۱۴۰۵ — تمامی حقوق محفوظ است.
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- FLOATING BUTTONS -->
+  <div class="floating-actions">
+
+    <a
+      href="tel:"
+      class="floating-button floating-call"
+      aria-label="تماس"
+    >
+      ☎
+    </a>
+
+    <a
+      href="#contact"
+      class="floating-button floating-whatsapp"
+      aria-label="واتساپ"
+    >
+      W
+    </a>
+
+  </div>
+
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+
+  </html>
