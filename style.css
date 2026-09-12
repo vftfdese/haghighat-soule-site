@@ -117,13 +117,20 @@ button {
   font-size: 25px;
 }
 
-/* Hero */
+/* Hero - تنها بخش تغییرکرده */
 .hero {
   background:
-    linear-gradient(110deg, rgba(17,17,17,.98), rgba(35,35,35,.9)),
-    #111;
+    linear-gradient(
+      90deg,
+      rgba(10, 10, 10, 0.93),
+      rgba(10, 10, 10, 0.55)
+    ),
+    url("hero.jpg") center center / cover no-repeat;
   color: white;
   padding: 105px 0 90px;
+  min-height: 570px;
+  display: flex;
+  align-items: center;
 }
 
 .hero-content {
@@ -273,8 +280,7 @@ button {
 
 .product-visual {
   height: 145px;
-  background:
-    linear-gradient(135deg, #292929, #555);
+  background: linear-gradient(135deg, #292929, #555);
   position: relative;
 }
 
@@ -536,6 +542,8 @@ button {
 
   .hero {
     padding: 70px 0;
+    min-height: 520px;
+    background-position: center center;
   }
 
   .hero-stats {
@@ -578,4 +586,3 @@ button {
     margin-top: 10px;
   }
 }
-/* FINAL STYLE UPDATE */
