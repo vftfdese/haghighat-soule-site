@@ -5,12 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
- <title>آهن‌پلاس | تأمین و فروش آهن‌آلات</title>
+  <title>آهن‌پلاس | تأمین و فروش آهن‌آلات</title>
 
   <meta
     name="description"
-    content="آهن پلاس؛ تأمین و فروش انواع آهن‌آلات شامل تیرآهن، میلگرد، ورق فولادی و پروفیل."
+    content="آهن‌پلاس؛ تأمین و فروش انواع آهن‌آلات شامل تیرآهن، میلگرد، ورق فولادی و پروفیل."
   >
+
+  <meta name="theme-color" content="#111111">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -21,19 +23,19 @@
   <header class="header">
     <div class="container nav">
 
-      <a href="#" class="logo">
+      <a href="#" class="logo" aria-label="آهن‌پلاس">
 
- <img
-  src="images/ahan-plus-logo.png"
-  alt="لوگوی آهن‌پلاس"
-  style="width: 100%; height: 100%; object-fit: contain; display: block;"
->      
+        <div class="logo-image-box">
+          <img
+            src="images/ahan-plus-logo.jpg"
+            alt="لوگوی آهن‌پلاس"
+            class="logo-image"
           >
         </div>
 
         <div class="logo-text">
-  <strong>آهن‌پلاس</strong>
-  <span>تأمین و فروش آهن‌آلات</span>
+          <strong>آهن‌پلاس</strong>
+          <span>تأمین و فروش آهن‌آلات</span>
         </div>
 
       </a>
@@ -54,6 +56,7 @@
           class="menu-button"
           id="menuButton"
           aria-label="باز کردن منو"
+          type="button"
         >
           ☰
         </button>
@@ -71,13 +74,19 @@
       class="mobile-close"
       id="mobileClose"
       aria-label="بستن منو"
+      type="button"
     >
       ×
     </button>
 
+    <div class="mobile-menu-brand">
+      <span>آهن‌پلاس</span>
+      <small>تأمین و فروش آهن‌آلات</small>
+    </div>
+
     <nav class="mobile-menu-links">
       <a href="#products">محصولات</a>
-      <a href="#why-us">چرا آهن پلاس؟</a>
+      <a href="#why-us">چرا آهن‌پلاس؟</a>
       <a href="#quote">استعلام قیمت</a>
       <a href="#contact">تماس با ما</a>
     </nav>
@@ -85,65 +94,80 @@
   </div>
 
 
-  <!-- HERO -->
+  <!-- MAIN -->
   <main>
 
+    <!-- HERO -->
     <section class="hero">
 
-      <div class="hero-content">
+      <div class="hero-overlay"></div>
 
-        <div class="hero-label">
-          <span></span>
-          تأمین و فروش آهن‌آلات
+      <div class="container hero-inner">
+
+        <div class="hero-content">
+
+          <div class="hero-label">
+            <span class="label-line"></span>
+            تأمین و فروش آهن‌آلات
+          </div>
+
+          <h1>
+            آهن را
+            <br>
+            <strong>مستقیم‌تر</strong>
+            انتخاب کنید.
+          </h1>
+
+          <p class="hero-description">
+            آهن‌پلاس، مرجع تأمین و فروش آهن‌آلات صنعتی و ساختمانی؛
+            با تمرکز بر انتخاب محصول مناسب، پاسخ‌گویی سریع و استعلام قیمت.
+          </p>
+
+          <div class="hero-actions">
+
+            <a
+              href="#products"
+              class="button button-primary"
+            >
+              مشاهده محصولات
+              <span>←</span>
+            </a>
+
+            <a
+              href="#quote"
+              class="button button-secondary"
+            >
+              دریافت استعلام قیمت
+            </a>
+
+          </div>
+
+          <div class="hero-stats">
+
+            <div class="hero-stat">
+              <strong>۰۱</strong>
+              <span>تأمین محصولات</span>
+            </div>
+
+            <div class="hero-stat">
+              <strong>۰۲</strong>
+              <span>تنوع مقاطع</span>
+            </div>
+
+            <div class="hero-stat">
+              <strong>۰۳</strong>
+              <span>پاسخ‌گویی سریع</span>
+            </div>
+
+          </div>
+
         </div>
 
-        <h1>
-          آهن را
-          <br>
-          <strong>مستقیم‌تر</strong>
-          انتخاب کنید.
-        </h1>
-
-        <p class="hero-description">
-          آهن پلاس، تأمین‌کننده انواع آهن‌آلات صنعتی و ساختمانی؛
-          با تمرکز بر انتخاب محصول مناسب، پاسخ‌گویی سریع و استعلام قیمت.
-        </p>
-
-        <div class="hero-actions">
-
-          <a
-            href="#products"
-            class="button button-primary"
-          >
-            مشاهده محصولات
-          </a>
-
-          <a
-            href="#quote"
-            class="button button-secondary"
-          >
-            دریافت استعلام قیمت
-          </a>
-
-        </div>
-
-        <div class="hero-stats">
-
-          <div class="hero-stat">
-            <strong>۰۱</strong>
-            <span>تأمین محصولات</span>
-          </div>
-
-          <div class="hero-stat">
-            <strong>۰۲</strong>
-            <span>تنوع مقاطع</span>
-          </div>
-
-          <div class="hero-stat">
-            <strong>۰۳</strong>
-            <span>پاسخ‌گویی سریع</span>
-          </div>
-
+        <div class="hero-side-note">
+          <span>STEEL</span>
+          <span>SUPPLY</span>
+          <span>&amp;</span>
+          <span>SALES</span>
         </div>
 
       </div>
@@ -163,7 +187,7 @@
 
           <div>
             <div class="section-kicker">
-              محصولات
+              ۰۱ / محصولات
             </div>
 
             <h2 class="section-title">
@@ -172,7 +196,7 @@
           </div>
 
           <p class="section-description">
-               محصولات اصلی قابل تأمین توسط آهن پلاس. 
+            محصولات اصلی قابل تأمین توسط آهن‌پلاس.
             برای دریافت قیمت و موجودی روز، استعلام بگیرید.
           </p>
 
@@ -184,6 +208,7 @@
           <button
             class="filter-button active"
             data-filter="all"
+            type="button"
           >
             همه
           </button>
@@ -191,6 +216,7 @@
           <button
             class="filter-button"
             data-filter="beam"
+            type="button"
           >
             تیرآهن
           </button>
@@ -198,6 +224,7 @@
           <button
             class="filter-button"
             data-filter="rebar"
+            type="button"
           >
             میلگرد
           </button>
@@ -205,6 +232,7 @@
           <button
             class="filter-button"
             data-filter="sheet"
+            type="button"
           >
             ورق فولادی
           </button>
@@ -212,6 +240,7 @@
           <button
             class="filter-button"
             data-filter="profile"
+            type="button"
           >
             پروفیل
           </button>
@@ -220,7 +249,6 @@
 
 
         <div class="products-grid">
-
 
           <!-- BEAM -->
           <article
@@ -234,11 +262,16 @@
                 src="images/steel-beams.jpg"
                 alt="تیرآهن"
                 loading="lazy"
-                style="width: 100%; height: 100%; object-fit: cover; display: block;"
               >
 
+              <div class="product-visual-shade"></div>
+
               <div class="product-number">
-                01
+                ۰۱
+              </div>
+
+              <div class="product-image-label">
+                STEEL BEAMS
               </div>
 
             </div>
@@ -262,7 +295,8 @@
                 href="#quote"
                 class="product-link"
               >
-                استعلام قیمت ←
+                استعلام قیمت
+                <span>←</span>
               </a>
 
             </div>
@@ -282,11 +316,16 @@
                 src="images/steel-rebar.jpg"
                 alt="میلگرد"
                 loading="lazy"
-                style="width: 100%; height: 100%; object-fit: cover; display: block;"
               >
 
+              <div class="product-visual-shade"></div>
+
               <div class="product-number">
-                02
+                ۰۲
+              </div>
+
+              <div class="product-image-label">
+                STEEL REBAR
               </div>
 
             </div>
@@ -310,7 +349,8 @@
                 href="#quote"
                 class="product-link"
               >
-                استعلام قیمت ←
+                استعلام قیمت
+                <span>←</span>
               </a>
 
             </div>
@@ -330,11 +370,16 @@
                 src="images/steel-sheets.jpg"
                 alt="ورق فولادی"
                 loading="lazy"
-                style="width: 100%; height: 100%; object-fit: cover; display: block;"
               >
 
+              <div class="product-visual-shade"></div>
+
               <div class="product-number">
-                03
+                ۰۳
+              </div>
+
+              <div class="product-image-label">
+                STEEL SHEETS
               </div>
 
             </div>
@@ -358,7 +403,8 @@
                 href="#quote"
                 class="product-link"
               >
-                استعلام قیمت ←
+                استعلام قیمت
+                <span>←</span>
               </a>
 
             </div>
@@ -378,11 +424,16 @@
                 src="images/steel-profiles.jpg"
                 alt="پروفیل فولادی"
                 loading="lazy"
-                style="width: 100%; height: 100%; object-fit: cover; display: block;"
               >
 
+              <div class="product-visual-shade"></div>
+
               <div class="product-number">
-                04
+                ۰۴
+              </div>
+
+              <div class="product-image-label">
+                STEEL PROFILES
               </div>
 
             </div>
@@ -406,7 +457,8 @@
                 href="#quote"
                 class="product-link"
               >
-                استعلام قیمت ←
+                استعلام قیمت
+                <span>←</span>
               </a>
 
             </div>
@@ -431,9 +483,8 @@
         <div class="section-header">
 
           <div>
-
             <div class="section-kicker">
-            آهن پلاس 
+              ۰۲ / چرا آهن‌پلاس؟
             </div>
 
             <h2 class="section-title">
@@ -441,11 +492,10 @@
               <br>
               ساده‌تر و مطمئن‌تر
             </h2>
-
           </div>
 
           <p class="section-description">
-            هدف ما فقط فروش محصول نیست؛
+            هدف آهن‌پلاس فقط فروش محصول نیست؛
             بلکه کمک به انتخاب درست و پاسخ‌گویی سریع
             به نیاز مشتری است.
           </p>
@@ -457,8 +507,12 @@
 
           <article class="why-card">
 
-            <div class="why-icon">
-              ✓
+            <div class="why-card-top">
+              <span class="why-index">۰۱</span>
+
+              <div class="why-icon">
+                ✓
+              </div>
             </div>
 
             <h3>
@@ -475,8 +529,12 @@
 
           <article class="why-card">
 
-            <div class="why-icon">
-              ↗
+            <div class="why-card-top">
+              <span class="why-index">۰۲</span>
+
+              <div class="why-icon">
+                ↗
+              </div>
             </div>
 
             <h3>
@@ -493,8 +551,12 @@
 
           <article class="why-card">
 
-            <div class="why-icon">
-              +
+            <div class="why-card-top">
+              <span class="why-index">۰۳</span>
+
+              <div class="why-icon">
+                +
+              </div>
             </div>
 
             <h3>
@@ -525,7 +587,15 @@
 
         <div class="cta-box">
 
+          <div class="cta-mark">
+            +
+          </div>
+
           <div class="cta-content">
+
+            <div class="section-kicker">
+              ۰۳ / استعلام قیمت
+            </div>
 
             <h2>
               قیمت امروز آهن را می‌خواهید؟
@@ -536,12 +606,26 @@
               تا برای استعلام قیمت و موجودی راهنمایی شوید.
             </p>
 
-            <a
-              href="#contact"
-              class="cta-button"
-            >
-              درخواست استعلام
-            </a>
+            <div class="cta-actions">
+
+              <a
+                href="tel:09121326034"
+                class="cta-button"
+              >
+                تماس برای استعلام
+                <span>←</span>
+              </a>
+
+              <a
+                href="https://wa.me/989121326034"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cta-button cta-button-outline"
+              >
+                پیام در واتساپ
+              </a>
+
+            </div>
 
           </div>
 
@@ -563,9 +647,8 @@
         <div class="section-header">
 
           <div>
-
             <div class="section-kicker">
-              ارتباط با ما
+              ۰۴ / ارتباط با ما
             </div>
 
             <h2 class="section-title">
@@ -573,12 +656,11 @@
               <br>
               با ما در ارتباط باشید.
             </h2>
-
           </div>
 
           <p class="section-description">
             برای دریافت قیمت، موجودی و اطلاعات بیشتر
-            از طریق تماس یا واتساپ با ما در ارتباط باشید.
+            از طریق تماس یا واتساپ با آهن‌پلاس در ارتباط باشید.
           </p>
 
         </div>
@@ -588,17 +670,20 @@
 
           <div class="contact-card">
 
+            <div class="contact-card-label">
+              CONTACT
+            </div>
+
             <h3>
               اطلاعات تماس
             </h3>
 
             <p>
               برای استعلام قیمت و دریافت اطلاعات محصولات،
-              با آهن پلاس در ارتباط باشید.
+              با آهن‌پلاس در ارتباط باشید.
             </p>
 
             <div class="contact-list">
-
 
               <div class="contact-item">
 
@@ -606,9 +691,12 @@
                   ☎
                 </div>
 
-                <a href="tel:09121326034">
-                  ۰۹۱۲۱۳۲۶۰۳۴
-                </a>
+                <div>
+                  <small>شماره تماس</small>
+                  <a href="tel:09121326034">
+                    ۰۹۱۲۱۳۲۶۰۳۴
+                  </a>
+                </div>
 
               </div>
 
@@ -619,13 +707,16 @@
                   W
                 </div>
 
-                <a
-                  href="https://wa.me/989121326034"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  ارتباط در واتساپ
-                </a>
+                <div>
+                  <small>ارتباط مستقیم</small>
+                  <a
+                    href="https://wa.me/989121326034"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    واتساپ آهن‌پلاس
+                  </a>
+                </div>
 
               </div>
 
@@ -636,9 +727,12 @@
                   ⌖
                 </div>
 
-                <span>
-                  شهرک صنعتی شمس‌آباد
-                </span>
+                <div>
+                  <small>موقعیت</small>
+                  <span>
+                    شهرک صنعتی شمس‌آباد
+                  </span>
+                </div>
 
               </div>
 
@@ -649,21 +743,27 @@
 
           <div class="contact-card dark">
 
-          <h3>
-  آهن‌پلاس
-          </h3>
+            <div class="contact-card-label">
+              AHAN PLUS
+            </div>
+
+            <h3>
+              آهن‌پلاس
+            </h3>
 
             <p>
               تأمین و فروش آهن‌آلات برای پروژه‌های
               ساختمانی و صنعتی.
             </p>
 
+            <div class="contact-dark-line"></div>
+
             <a
               href="tel:09121326034"
               class="button button-primary"
-              style="margin-top: 20px;"
             >
               تماس با ما
+              <span>←</span>
             </a>
 
           </div>
@@ -683,7 +783,8 @@
     <div class="container footer-inner">
 
       <div class="footer-brand">
-       آهن پلاس.
+        <strong>آهن‌پلاس</strong>
+        <span>تأمین و فروش آهن‌آلات</span>
       </div>
 
       <div class="footer-copy">
@@ -701,7 +802,7 @@
     <a
       href="tel:09121326034"
       class="floating-button floating-call"
-      aria-label="تماس با آهن پلاس"
+      aria-label="تماس با آهن‌پلاس"
     >
       ☎
     </a>
@@ -711,7 +812,7 @@
       target="_blank"
       rel="noopener noreferrer"
       class="floating-button floating-whatsapp"
-      aria-label="ارتباط در واتساپ"
+      aria-label="واتساپ آهن‌پلاس"
     >
       W
     </a>
@@ -719,9 +820,8 @@
   </div>
 
 
-  <!-- JAVASCRIPT -->
   <script src="script.js"></script>
 
 </body>
 
-</html>
+              </html>
