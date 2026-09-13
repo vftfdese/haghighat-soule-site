@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  /* =========================
+     MOBILE MENU
+  ========================= */
+
   const menuButton = document.getElementById("menuButton");
   const mobileMenu = document.getElementById("mobileMenu");
   const mobileClose = document.getElementById("mobileClose");
@@ -39,15 +43,15 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-  /* PRODUCT FILTERS */
+  /* =========================
+     PRODUCT FILTER
+  ========================= */
 
   const filterButtons = document.querySelectorAll(".filter-button");
   const productCards = document.querySelectorAll(".product-card");
 
   filterButtons.forEach(function (button) {
-
     button.addEventListener("click", function () {
-
       const selectedFilter = button.getAttribute("data-filter");
 
       filterButtons.forEach(function (item) {
@@ -57,7 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
       button.classList.add("active");
 
       productCards.forEach(function (card) {
-
         const cardCategory = card.getAttribute("data-category");
 
         if (
@@ -68,20 +71,17 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
           card.style.display = "none";
         }
-
       });
-
     });
-
   });
 
 
-  /* SMOOTH SCROLL */
+  /* =========================
+     SMOOTH SCROLL
+  ========================= */
 
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
-
     link.addEventListener("click", function (event) {
-
       const targetId = link.getAttribute("href");
 
       if (!targetId || targetId === "#") {
@@ -91,18 +91,32 @@ document.addEventListener("DOMContentLoaded", function () {
       const targetElement = document.querySelector(targetId);
 
       if (targetElement) {
-
         event.preventDefault();
 
         targetElement.scrollIntoView({
           behavior: "smooth",
           block: "start"
         });
-
       }
-
     });
+  });
 
+
+  /* =========================
+     DYNAMIC PRODUCT PRICES
+  ========================= */
+
+  const priceElements = document.querySelectorAll(".price-value");
+
+  priceElements.forEach(function (element) {
+    const priceKey = element.getAttribute("data-price-key");
+
+    if (
+      typeof productPrices !== "undefined" &&
+      productPrices[priceKey]
+    ) {
+      element.textContent = productPrices[priceKey];
+    }
   });
 
 });
