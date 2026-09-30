@@ -721,3 +721,20 @@ textarea {
     gap: 8px;
   }
   }
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 170px;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        width: 135px;
+    }
+}
