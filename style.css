@@ -727,14 +727,29 @@ textarea {
     text-decoration: none;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    height: 58px;
+    overflow: hidden;
+}
+
 .logo img {
-    width: 170px;
-    height: auto;
+    width: 92px;
+    height: 58px;
+    object-fit: contain;
+    object-position: center;
     display: block;
 }
 
 @media (max-width: 768px) {
+    .logo {
+        height: 52px;
+    }
+
     .logo img {
-        width: 135px;
+        width: 78px;
+        height: 52px;
     }
 }
